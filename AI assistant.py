@@ -50,8 +50,8 @@ def sendemail(to,content):
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login('lelouch33340@gmail.com','Avatarzuko')
-    server.sendmail('lelouch33340@gmail.com',to,content)
+    server.login('*****@gmail.com','*****')
+    server.sendmail('****@gmail.com',to,content)
     server.close()
 
 def cpu():
@@ -77,6 +77,7 @@ def takecommand():
         return query
 def screenshot():
     image = pyautogui.screenshot()
+#    Add your own picture path here
     image.save('C:/Users/Star/OneDrive/Pictures/4962187.png')
 
 
@@ -118,6 +119,7 @@ if __name__ == '__main__':
         elif 'restart'in query:
             os.system('shutdown /r /t 1')
         elif 'play songs'in query:
+#             Add your song path here
             songpath = 'c:/Users/Star/Music'
             songs = os.listdir(songpath)
             os.startfile(os.path.join(songpath,songs[0]))
